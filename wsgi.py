@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-DotCloud Django Docs:  http://olddocs.dotcloud.com/tutorials/django/
+DotCloud Django Docs:  http://docs.dotcloud.com/services/python/
 
 In order for the application to run on DotCloud, it must have a
 `wsgi.py` file.
