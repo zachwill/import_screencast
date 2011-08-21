@@ -9,9 +9,10 @@ In order for the application to run on DotCloud, it must have a
 
 import os
 import sys
-import django.core.handlers.wsgi
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'import_screencast.settings'
+
+import django.core.handlers.wsgi
 django_app = django.core.handlers.wsgi.WSGIHandler()
 
 
