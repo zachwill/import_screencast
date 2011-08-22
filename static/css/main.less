@@ -91,3 +91,25 @@ header{
     float: right;
     width: 40%;
 }
+
+.super_logo{
+    margin: 0 auto;
+    height: 75px;
+    width: 75px;
+}
+footer{
+    display: block;
+    margin-top: 100px;
+    a.super_logo{
+        background: url('/static/img/super_z.png') no-repeat center center;
+    }
+    a.super_logo:hover{
+        background: url('/static/img/super_z_color.png') no-repeat center center;
+    }
+}
+
+/* Just a little image preloading. */
+footer:after{
+    content: url('/static/img/super_z_color.png');
+    display: none;
+}

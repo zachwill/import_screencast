@@ -15,3 +15,7 @@ header a:hover{text-decoration:none;}
 .left{background:url('/static/img/bracket.png') right top no-repeat;float:left;min-height:300px;padding:0 5%;width:50%;}.left h2{font-size:50px;margin-bottom:40px;text-align:center;text-transform:uppercase;}
 .left p{font-size:18px;line-height:1.5;padding:0 10%;}
 .right{background:url('/static/img/company.png') no-repeat center center;min-height:300px;float:right;width:40%;}
+.super_logo{margin:0 auto;height:75px;width:75px;}
+footer{display:block;margin-top:100px;}footer a.super_logo{background:url('/static/img/super_z.png') no-repeat center center;}
+footer a.super_logo:hover{background:url('/static/img/super_z_color.png') no-repeat center center;}
+footer:after{content:url('/static/img/super_z_color.png');display:none;}
