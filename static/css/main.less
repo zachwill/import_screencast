@@ -1,4 +1,5 @@
 @color: #6b1bdf;
+@width: 90%;
 
 /* Link Color and Styles */
 a, a:active, a:visited { color: @color; }
@@ -9,11 +10,12 @@ a:hover { text-decoration: underline; }
 ::-moz-selection{ background:@color; color:#fff; text-shadow: none; }
 ::selection { background:@color; color:#fff; text-shadow: none; }
 
-/* I never find myself really using list-style. */
-ul{ list-style: none; }
-
 body{
     color: #444;
+}
+header, #main, footer{
+  margin: 0 auto;
+  width: @width;
 }
 
 header{
@@ -21,9 +23,9 @@ header{
     margin-bottom: 100px;
     ul{
         border-bottom:1px solid #eee;
+        list-style: none;
         margin:0 auto;
         padding:10px 0;
-        width:90%;
     }
     li{
         float: right;
@@ -62,6 +64,7 @@ header{
     background:@color;
     color: white;
 }
+
 
 .left h2, .right form{ margin-top: 20px; }
 .left{
