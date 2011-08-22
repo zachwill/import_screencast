@@ -1,9 +1,8 @@
 """URL patterns for the website."""
 
 from django.conf.urls.defaults import patterns, include, url
-
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+
 admin.autodiscover()
 
 
@@ -12,6 +11,7 @@ urlpatterns = patterns('screencasts.views',
     url(r'^about/$', 'about'),
     url(r'^code/$', 'code'),
     url(r'^donate/$', 'donate'),
+    url(r'^screencast/(?P<slug>[-\w]+)/$', 'screencast'),
 )
 
 

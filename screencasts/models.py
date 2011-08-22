@@ -10,13 +10,18 @@ from django.template.defaultfilters import slugify
 
 class Screencast(models.Model):
     """A model for screencasts."""
-    title = models.CharField('Title', max_length=75)
-    slug = models.SlugField()
+    date = models.DateField(auto_now=True)
+    title = models.CharField(max_length=75)
+    slug = models.SlugField(blank=True)
+    vimeo_url = models.URLField('Vimeo URL', verify_exists=False)
     description_markdown = models.TextField('Markdown Description')
     description = models.TextField('Description', blank=True, null=True)
-    vimeo_id = models.CharField(max_length=50, unique=True)
-    vimeo_url = models.URLField('Vimeo URL', verify_exists=False)
-    embed_url = models.URLField(verify_exists=False)
+    vimeo_id = models.CharField('Vimeo ID', max_length=50, blank=True)
+    embed_url = models.URLField('Embed URL', verify_exists=False, blank=True)
+
+    def __unicode__(self):
+        """Give each Screencast a name."""
+        return self.title
 
     def create_embed_url(self, vimeo_id):
         """Create an embed URL that can be used with iframe elements."""
@@ -33,6 +38,14 @@ class Screencast(models.Model):
         """Parse the unique vimeo ID from the vimeo URL."""
         return re.search(r'\d+', vimeo_url).group()
 
+    def save_slug(self):
+        """
+        If the screencast does not already have a slug, create one from the
+        title.
+        """
+        if not self.slug:
+            self.slug = slugify(self.title)
+
     def save(self):
         """
         Several of the fields are actually set on save. Normally, only the
@@ -43,5 +56,5 @@ class Screencast(models.Model):
         self.vimeo_id = vimeo_id
         self.embed_url = self.create_embed_url(vimeo_id)
         self.description = markdown(self.description_markdown)
-        self.slug = slugify(self.title)
+        self.save_slug()
         super(Screencast, self).save()
