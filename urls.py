@@ -2,6 +2,7 @@
 
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
+from screencasts.feeds import LatestScreencasts
 
 admin.autodiscover()
 
@@ -12,6 +13,7 @@ urlpatterns = patterns('screencasts.views',
     url(r'^code/$', 'code'),
     url(r'^donate/$', 'donate'),
     url(r'^screencast/(?P<slug>[-\w]+)/$', 'screencast'),
+    url(r'^feed/$', LatestScreencasts()),
 )
 
 
