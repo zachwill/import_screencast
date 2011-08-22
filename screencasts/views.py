@@ -6,7 +6,9 @@ from screencasts.models import Screencast
 
 def home(request):
     """Render the index page."""
-    return render_to_response('index.html')
+    screencasts = Screencast.objects.order_by('-date')[:5]
+    context = {'screencasts': screencasts}
+    return render_to_response('index.html', context)
 
 
 def about(request):
