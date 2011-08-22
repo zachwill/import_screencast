@@ -23,6 +23,10 @@ class Screencast(models.Model):
         """Give each Screencast a name."""
         return self.title
 
+    def get_absolute_url(self):
+        """Method to get unique URL for a screencast."""
+        return '/screencast/%s/' % self.slug
+
     def create_embed_url(self, vimeo_id):
         """Create an embed URL that can be used with iframe elements."""
         params = urlencode({
