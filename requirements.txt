@@ -10,3 +10,15 @@ django
 mock
 coverage
 django-test-coverage
+
+
+# ---------------------
+# Database
+# ---------------------
+south
+
+
+# ---------------------
+# Utilities
+# ---------------------
+markdown
