@@ -3,7 +3,7 @@
 
 /* Link Color and Styles */
 a, a:active, a:visited { color: @color; }
-a:hover { text-decoration: underline; }
+a:hover { background: @color; color: white; text-decoration: none; }
 
 
 /* Custom highlight */
@@ -20,7 +20,7 @@ header, #main, footer{
 
 header{
     display:block;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     ul{
         border-bottom:1px solid #eee;
         list-style: none;
@@ -65,31 +65,27 @@ header{
     color: white;
 }
 
-
-.left h2, .right form{ margin-top: 20px; }
-.left{
-    background: url('/static/img/bracket.png') right top no-repeat;
+.screencast{
+    margin: 50px 0;
+}
+.description{
     float: left;
-    min-height:300px;
-    padding: 0 5%;
-    width: 50%;
-    h2{
-        font-size: 50px;
-        margin-bottom: 40px;
-        text-align: center;
-        text-transform: uppercase;
-    }
+    max-width: 29%;
     p{
-        font-size: 18px;
-        line-height:1.5;
-        padding: 0 10%;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 90px 0 0;
+        padding: 0 5%;
+        text-align: justify;
     }
 }
-.right{
-    background: url('/static/img/company.png') no-repeat center center;
-    min-height: 300px;
+.content{
     float: right;
-    width: 40%;
+    min-width: 65%;
+    h2{
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
 }
 
 .super_logo{
@@ -99,7 +95,7 @@ header{
 }
 footer{
     display: block;
-    margin-top: 100px;
+    margin: 100px auto 50px;
     a.super_logo{
         background: url('/static/img/super_z.png') no-repeat center center;
     }
