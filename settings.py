@@ -12,7 +12,7 @@ TEST_RUNNER = 'django-test-coverage.runner.run_tests'
 if os.path.exists('/home/dotcloud'):
     DB_PATH = '/home/dotcloud/test.db'
 else:
-    DB_PATH = ''
+    DB_PATH = 'test.db'
 
 ADMINS = (
     ('Zach', 'hey@zachwill.com'),
