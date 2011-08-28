@@ -11,7 +11,6 @@ urlpatterns = patterns('screencasts.views',
     url(r'^$', 'home'),
     url(r'^about/$', 'about'),
     url(r'^code/$', 'code'),
-    url(r'^donate/$', 'donate'),
     url(r'^screencast/(?P<slug>[-\w]+)/$', 'screencast'),
     url(r'^feed/$', LatestScreencasts()),
 )
