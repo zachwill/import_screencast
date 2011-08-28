@@ -21,11 +21,6 @@ def code(request):
     return redirect('https://github.com/zachwill')
 
 
-def donate(request):
-    """Render donation page."""
-    return render_to_response('donate.html')
-
-
 def screencast(request, slug):
     """Return a specific screencast given a slug."""
     specific_screencast = get_object_or_404(Screencast, slug=slug)
