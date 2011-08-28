@@ -25,6 +25,10 @@ a:hover { background: @color; color: white; text-decoration: none; }
 body{
     color: #444;
 }
+body:after{
+  content: url('/static/img/headline.png');
+  display: none;
+}
 header, #main, footer{
   margin: 0 auto;
   width: @width;
@@ -77,11 +81,11 @@ header{
 .headline{
     background: url('/static/img/headline.png') no-repeat center center;
     height: 620px;
-    margin: 0 auto 25px;
+    margin: 0 auto 50px;
     width: 950px;
 }
 .screencast{
-    margin: 100px 0 125px;
+    margin: 100px 0 150px;
 }
 .description{
     float: left;
