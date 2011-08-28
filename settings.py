@@ -9,8 +9,8 @@ TEMPLATE_DEBUG = DEBUG
 TEST_RUNNER = 'django-test-coverage.runner.run_tests'
 
 # This should work both locally and on DotCloud.
-if os.path.exists('/home/dotcloud/current'):
-    DB_PATH = '/home/dotcloud/'
+if os.path.exists('/home/dotcloud'):
+    DB_PATH = '/home/dotcloud/test.db'
 else:
     DB_PATH = ''
 
