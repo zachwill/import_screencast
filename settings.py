@@ -22,6 +22,7 @@ DATABASES = {
 # This should work both locally and on DotCloud.
 if os.path.exists('/home/dotcloud'):
     os.symlink('/home/dotcloud/test.db', 'test.db')
+    DATABASE_NAME = '/home/dotcloud/test.db'
     DB_PATH = '/home/dotcloud/test.db'
 else:
     DB_PATH = 'test.db'
