@@ -8,23 +8,15 @@ TEMPLATE_DEBUG = DEBUG
 # This way we can get test coverage.
 TEST_RUNNER = 'django-test-coverage.runner.run_tests'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'test.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
-
 # This should work both locally and on DotCloud.
+DATABASE_ENGINE = 'django.db.backends.sqlite3'
+
+# And the database name...
 if os.path.exists('/home/dotcloud'):
     DATABASE_NAME = '/home/dotcloud/test.db'
-    DB_PATH = '/home/dotcloud/test.db'
 else:
-    DB_PATH = 'test.db'
+    DATABASE_NAME = 'test.db'
+
 
 ADMINS = (
     ('Zach', 'hey@zachwill.com'),
