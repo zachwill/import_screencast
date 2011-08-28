@@ -1,11 +1,11 @@
 <div class="screencast clearfix">
-    <div class="description">
-        {{ screencast.description|safe }}
-    </div>
     <div class="content">
         <h2>
             <a href="/screencast/{{ screencast.slug }}/">{{ screencast.title }}</a>
         </h2>
-        <iframe src="{{ screencast.embed_url }}" width=720 height=450 frameborder=0></iframe>
+        <iframe src="{{ screencast.embed_url }}" width=640 height=400 frameborder=0></iframe>
+    </div>
+    <div class="description">
+        {{ screencast.description|safe }}
     </div>
 </div>
