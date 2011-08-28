@@ -9,7 +9,7 @@
         self.stop(true).animate({
             backgroundColor: color,
             color: 'white'
-        }, 350)
+        }, 300)
 
     }, function(e) {
         var self = $(this);

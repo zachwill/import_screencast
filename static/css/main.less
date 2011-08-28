@@ -20,9 +20,8 @@ header, #main, footer{
 
 header{
     display:block;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     ul{
-        border-bottom:1px solid #eee;
         list-style: none;
         margin:0 auto;
         padding:10px 0;
@@ -35,9 +34,13 @@ header{
         float:left;
         padding-top: 10px;
         a{
-          background: url('/static/img/yourlogo.png') no-repeat center center;
-          height: 41px;
-          width: 315px;
+          background: url('/static/img/home.png') no-repeat 0px 10px;
+          height: 80px;
+          margin: 0 auto;
+          width: 170px;
+        }
+        a:hover{
+            background-position-y: -88px;
         }
     }
     a{
@@ -55,6 +58,8 @@ header{
         color: #444;
     }
     a:hover{
+        background: #fff;
+        color: #444;
         text-decoration: none;
     }
 }
@@ -64,19 +69,29 @@ header{
     background:@color;
     color: white;
 }
-
+.headline{
+    background: url('/static/img/headline.png') no-repeat center center;
+    height: 600px;
+    margin: 0 auto;
+    width: 950px;
+}
 .screencast{
-    margin: 50px 0;
+    margin: 100px 0 125px;
 }
 .description{
     float: left;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 90px 0 0;
     max-width: 29%;
     p{
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 90px 0 0;
         padding: 0 5%;
         text-align: justify;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 25px 5%;
     }
 }
 .content{
@@ -95,7 +110,7 @@ header{
 }
 footer{
     display: block;
-    margin: 100px auto 50px;
+    margin: 125px auto 20px;
     a.super_logo{
         background: url('/static/img/super_z.png') no-repeat center center;
     }
