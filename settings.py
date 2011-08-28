@@ -1,7 +1,6 @@
 """Django settings file."""
 
 import os
-import sys
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,9 +8,20 @@ TEMPLATE_DEBUG = DEBUG
 # This way we can get test coverage.
 TEST_RUNNER = 'django-test-coverage.runner.run_tests'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'test.db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+
 # This should work both locally and on DotCloud.
 if os.path.exists('/home/dotcloud'):
-    sys.path.insert(0, '/home/dotcloud')
+    DATABASE_NAME = '/home/dotcloud/test.db'
     DB_PATH = '/home/dotcloud/test.db'
 else:
     DB_PATH = 'test.db'
@@ -22,16 +32,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
