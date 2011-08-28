@@ -16,11 +16,10 @@ header .code a{background:url('/static/img/code.png') no-repeat 0px 10px;}
 header .code a{height:100px;margin:0 auto;width:175px;}
 header .code a:hover{background-position-y:-88px;}
 .headline{background:url('/static/img/headline.png') no-repeat center center;height:620px;margin:0 auto 25px;width:950px;}
-.screencast{margin:75px 0 125px;}
-.description{float:left;font-size:16px;line-height:1.5;margin:80px 0 0;width:30%;}.description p{text-align:justify;}
-.description ul{list-style:none;margin:0;padding:25px 5%;}
-.content{float:right;width:62%;}.content h2{font:normal 40px 'Folk',sans-serif;margin:0 auto 35px;width:100%;}
-.content a{padding:10px;text-transform:uppercase;}
+.screencast{margin:100px 0 125px;}
+.description{float:left;font-size:16px;line-height:1.5;width:33%;}.description h2{font:normal 55px 'Folk',sans-serif;margin:0 auto 35px;width:100%;}.description h2 a{display:inline-block;padding:10px;text-transform:uppercase;}
+.description p{text-align:justify;}
+.content{float:right;width:63%;}.content iframe{display:block;margin:0 auto;}
 .super_logo{margin:0 auto;height:75px;width:75px;}
 footer{display:block;margin:125px auto 20px;}footer a.super_logo{background:url('/static/img/super_z.png') no-repeat center center;}
 footer a.super_logo:hover{background:url('/static/img/super_z_color.png') no-repeat center center;}
