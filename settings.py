@@ -1,10 +1,18 @@
-# Django settings for import_screencast project.
+"""Django settings file."""
+
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # This way we can get test coverage.
 TEST_RUNNER = 'django-test-coverage.runner.run_tests'
+
+# This should work both locally and on DotCloud.
+if os.path.exists('/home/dotcloud/current'):
+    DB_PATH = '/home/dotcloud/'
+else:
+    DB_PATH = ''
 
 ADMINS = (
     ('Zach', 'hey@zachwill.com'),
