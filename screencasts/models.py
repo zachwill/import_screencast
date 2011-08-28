@@ -10,7 +10,7 @@ from django.template.defaultfilters import slugify
 
 class Screencast(models.Model):
     """A model for screencasts."""
-    date = models.DateField(auto_now=True)
+    date = models.DateTimeField(auto_now=True, editable=True)
     title = models.CharField(max_length=75)
     slug = models.SlugField(blank=True)
     vimeo_url = models.URLField('Vimeo URL', verify_exists=False)
@@ -31,7 +31,7 @@ class Screencast(models.Model):
         """Create an embed URL that can be used with iframe elements."""
         params = urlencode({
             'byline': 0,
-            'color': '6b1bdf',
+            'color': '8240e9',
             'portrait': 0,
             'title': 0,
         })
