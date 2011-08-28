@@ -5,7 +5,13 @@
 
 
 {% block main %}
-<div class="headline"></div>
+<div class="headline">
+    {% if not page %}
+    <div class="home_page"></div>
+    {% else %}
+    <div class="pagination"></div>
+    {% endif %}
+</div>
 {% for screencast in screencasts %}
   {% include "individual_screencast.html" %}
 {% endfor %}

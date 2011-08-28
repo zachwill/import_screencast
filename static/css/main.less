@@ -78,11 +78,25 @@ header{
         .navigation(175px);
     }
 }
-.headline{
-    background: url('/static/img/headline.png') no-repeat center center;
+.large_image{
+    /* For headline images... */
     height: 620px;
     margin: 0 auto 50px;
     width: 950px;
+}
+.headline{
+    .home_page{
+        background: url('/static/img/headline.png') no-repeat center center;
+        .large_image;
+    }
+    .pagination{
+        background: url('/static/img/pagination.png') no-repeat center center;
+        .large_image;
+    }
+    .about_headline{
+        background: url('/static/img/about_headline.png') no-repeat center center;
+        .large_image;
+    }
 }
 .screencast{
     margin: 100px 0 150px;

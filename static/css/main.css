@@ -16,7 +16,10 @@ header .about a:hover{background-position-y:-88px;}
 header .code a{background:url('/static/img/code.png') no-repeat 0px 10px;}
 header .code a{height:100px;margin:0 auto;width:175px;}
 header .code a:hover{background-position-y:-88px;}
-.headline{background:url('/static/img/headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
+.large_image{height:620px;margin:0 auto 50px;width:950px;}
+.headline .home_page{background:url('/static/img/headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
+.headline .pagination{background:url('/static/img/pagination.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
+.headline .about_headline{background:url('/static/img/about_headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
 .screencast{margin:100px 0 150px;}
 .description{float:left;font-size:16px;line-height:1.5;width:33%;}.description h2{font:normal 55px 'Folk',sans-serif;margin:0 auto 35px;width:100%;}.description h2 a{display:inline-block;padding:10px;text-transform:uppercase;}
 .description p{text-align:justify;}
