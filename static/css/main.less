@@ -1,6 +1,18 @@
 @color: #8240e9;
 @width: 90%;
 
+@font-face {
+    font-family: 'Folk';
+    src: url('/static/font/Folksolid-webfont.eot');
+    src: url('/static/font/Folksolid-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/font/Folksolid-webfont.woff') format('woff'),
+         url('/static/font/Folksolid-webfont.ttf') format('truetype'),
+         url('/static/font/Folksolid-webfont.svg#Folksolid') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Link Color and Styles */
 a, a:active, a:visited { color: @color; }
 a:hover { background: @color; color: white; text-decoration: none; }
@@ -70,21 +82,20 @@ header{
 }
 .headline{
     background: url('/static/img/headline.png') no-repeat center center;
-    height: 600px;
-    margin: 0 auto;
+    height: 620px;
+    margin: 0 auto 25px;
     width: 950px;
 }
 .screencast{
-    margin: 100px 0 125px;
+    margin: 75px 0 125px;
 }
 .description{
     float: left;
     font-size: 16px;
     line-height: 1.5;
-    margin: 90px 0 0;
-    max-width: 29%;
+    margin: 80px 0 0;
+    width: 30%;
     p{
-        padding: 0 5%;
         text-align: justify;
     }
     ul{
@@ -95,10 +106,15 @@ header{
 }
 .content{
     float: right;
-    min-width: 65%;
+    width: 62%;
     h2{
-        font-size: 28px;
-        margin-bottom: 35px;
+        font: normal 40px 'Folk', sans-serif;
+        margin: 0 auto 35px;
+        width: 100%;
+    }
+    a{
+        padding: 10px;
+        text-transform: uppercase;
     }
 }
 
