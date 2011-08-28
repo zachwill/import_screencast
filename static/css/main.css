@@ -15,7 +15,6 @@ header .about a:hover{background-position-y:-88px;}
 header .code a{background:url('/static/img/code.png') no-repeat 0px 10px;}
 header .code a{height:100px;margin:0 auto;width:175px;}
 header .code a:hover{background-position-y:-88px;}
-.no-js header a:hover{background:#8240e9;color:white;}
 .headline{background:url('/static/img/headline.png') no-repeat center center;height:620px;margin:0 auto 25px;width:950px;}
 .screencast{margin:75px 0 125px;}
 .description{float:left;font-size:16px;line-height:1.5;margin:80px 0 0;width:30%;}.description p{text-align:justify;}
