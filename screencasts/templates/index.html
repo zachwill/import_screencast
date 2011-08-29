@@ -12,7 +12,7 @@
     <div class="pagination"></div>
     {% endif %}
 </div>
-{% for screencast in screencasts %}
+{% for screencast in screencasts.object_list %}
   {% include "individual_screencast.html" %}
 {% endfor %}
 {% endblock %}
