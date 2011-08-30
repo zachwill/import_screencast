@@ -6,9 +6,10 @@ from urllib import urlencode
 from markdown import markdown
 from django.db import models
 from django.template.defaultfilters import slugify
+from caching.base import CachingMixin, CachingManager
 
 
-class Screencast(models.Model):
+class Screencast(CachingMixin, models.Model):
     """A model for screencasts."""
     date = models.DateTimeField(auto_now=True, editable=True)
     title = models.CharField(max_length=75)
@@ -18,6 +19,7 @@ class Screencast(models.Model):
     description = models.TextField('Description', blank=True, null=True)
     vimeo_id = models.CharField('Vimeo ID', max_length=50, blank=True)
     embed_url = models.URLField('Embed URL', verify_exists=False, blank=True)
+    objects = CachingManager()
 
     def __unicode__(self):
         """Give each Screencast a name."""

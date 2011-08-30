@@ -17,6 +17,8 @@ if os.path.exists('/home/dotcloud'):
 else:
     DATABASE_NAME = 'test.db'
 
+# For cache-machine caching
+CACHE_BACKEND = 'caching.backends.locmem://'
 
 ADMINS = (
     ('Zach', 'hey@zachwill.com'),
