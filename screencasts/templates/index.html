@@ -6,13 +6,27 @@
 
 {% block main %}
 <div class="headline">
-    {% if not page %}
-    <div class="home_page"></div>
-    {% else %}
+    {% if screencasts.has_previous %}
     <div class="pagination"></div>
+    {% else %}
+    <div class="home_page"></div>
     {% endif %}
 </div>
 {% for screencast in screencasts.object_list %}
   {% include "individual_screencast.html" %}
 {% endfor %}
+
+<div class="pages clearfix">
+{% if screencasts.has_previous %}
+    {% if screencasts.previous_page_number == 1 %}
+    <a class="ir prev_page" href="/">Previous</a>
+    {% else %}
+    <a class="ir prev_page" href="/page/{{ screencasts.previous_page_number }}">Previous</a>
+    {% endif %}
+{% endif %}
+{% if screencasts.has_next %}
+    <a class="ir next_page" href="/page/{{ screencasts.next_page_number }}">Next</a>
+{% endif %}
+</div>
+
 {% endblock %}
