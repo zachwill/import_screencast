@@ -97,6 +97,11 @@ header{
         background: url('/static/img/about_headline.png') no-repeat center center;
         .large_image;
     }
+    .what_font{
+        background: url('/static/img/what_font.png') no-repeat center center;
+        margin-top: 50px;
+        .large_image;
+    }
 }
 .screencast{
     margin: 100px 0 150px;
@@ -128,7 +133,25 @@ header{
       margin: 0 auto;
     }
 }
-
+.pages{
+    margin: 0 auto;
+    width: @width;
+    a{
+        height: 100px;
+        width: 280px;
+    }
+    a:hover{
+        background-position-y: -90px;
+    }
+    .prev_page{
+        background: url('/static/img/prev.png') no-repeat 0 10px;
+        float: left;
+    }
+    .next_page{
+        background: url('/static/img/next.png') no-repeat 0 10px;
+        float: right;
+    }
+}
 .super_logo{
     margin: 0 auto;
     height: 75px;

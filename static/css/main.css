@@ -20,10 +20,15 @@ header .code a:hover{background-position-y:-88px;}
 .headline .home_page{background:url('/static/img/headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
 .headline .pagination{background:url('/static/img/pagination.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
 .headline .about_headline{background:url('/static/img/about_headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
+.headline .what_font{background:url('/static/img/what_font.png') no-repeat center center;margin-top:50px;height:620px;margin:0 auto 50px;width:950px;}
 .screencast{margin:100px 0 150px;}
 .description{float:left;font-size:16px;line-height:1.5;width:33%;}.description h2{font:normal 55px 'Folk',sans-serif;margin:0 auto 35px;width:100%;}.description h2 a{display:inline-block;padding:10px;text-transform:uppercase;}
 .description p{text-align:justify;}
 .content{float:right;width:63%;}.content iframe{display:block;margin:0 auto;}
+.pages{margin:0 auto;width:90%;}.pages a{height:100px;width:280px;}
+.pages a:hover{background-position-y:-90px;}
+.pages .prev_page{background:url('/static/img/prev.png') no-repeat 0 10px;float:left;}
+.pages .next_page{background:url('/static/img/next.png') no-repeat 0 10px;float:right;}
 .super_logo{margin:0 auto;height:75px;width:75px;}
 footer{display:block;margin:125px auto 20px;}footer a.super_logo{background:url('/static/img/super_z.png') no-repeat center center;}
 footer a.super_logo:hover{background:url('/static/img/super_z_color.png') no-repeat center center;}
