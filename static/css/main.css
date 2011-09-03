@@ -22,6 +22,7 @@ header .code a:hover{background-position-y:-88px;}
 .headline .about_headline{background:url('/static/img/about_headline.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;}
 .headline .what_font{background:url('/static/img/what_font.png') no-repeat center center;margin-top:50px;height:620px;margin:0 auto 50px;width:950px;}
 .headline .what_framework{background:url('/static/img/what_framework.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;height:530px;}
+.headline .how_contact{background:url('/static/img/how_contact.png') no-repeat center center;height:620px;margin:0 auto 50px;width:950px;height:600px;}
 .screencast{margin:100px 0 150px;}
 .description{float:left;font-size:16px;line-height:1.5;width:33%;}.description h2{font:normal 55px 'Folk',sans-serif;margin:0 auto 35px;width:100%;}.description h2 a{display:inline-block;padding:10px;text-transform:uppercase;}
 .description p{text-align:justify;}
