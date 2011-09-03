@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('screencasts.views',
     url(r'^$', 'home'),
-    url(r'^page/(?P<page_num>\d+)$', 'home'),
+    url(r'^page/(?P<page_num>\d+)$', 'home', name='page'),
     url(r'^about/$', 'about'),
     url(r'^code/$', 'code'),
     url(r'^screencast/(?P<slug>[-\w]+)/$', 'screencast'),
