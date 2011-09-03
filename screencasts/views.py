@@ -1,13 +1,13 @@
 """Views for the screencast Django app."""
 
-from django.shortcuts import render_to_response, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from screencasts.models import Screencast
 
 
 def home(request, page_num=1):
     """Render the index page."""
-    screencast_list = Screencast.objects.order_by('-date').all()
+    screencast_list = Screencast.objects.order_by('-id')
     pagination = Paginator(screencast_list, 3)
     try:
         screencasts = pagination.page(page_num)
@@ -16,12 +16,12 @@ def home(request, page_num=1):
     except EmptyPage:
         screencasts = pagination.page(pagination.num_pages)
     context = {'screencasts': screencasts}
-    return render_to_response('index.html', context)
+    return render(request, 'index.html', context)
 
 
 def about(request):
     """Render the about page."""
-    return render_to_response('about.html')
+    return render(request, 'about.html')
 
 
 def code(request):
@@ -33,4 +33,4 @@ def screencast(request, slug):
     """Return a specific screencast given a slug."""
     specific_screencast = get_object_or_404(Screencast, slug=slug)
     context = {'screencast': specific_screencast}
-    return render_to_response('screencast.html', context)
+    return render(request, 'screencast.html', context)
