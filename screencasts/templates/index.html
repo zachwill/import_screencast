@@ -19,13 +19,13 @@
 <div class="pages clearfix">
 {% if screencasts.has_previous %}
     {% if screencasts.previous_page_number == 1 %}
-    <a class="ir prev_page" href="/">Previous</a>
+    <a class="ir prev_page" rel="prev" href="/">Previous</a>
     {% else %}
-    <a class="ir prev_page" href="{% url page page_num=screencasts.previous_page_number %}">Previous</a>
+    <a class="ir prev_page" rel="prev" href="{% url page page_num=screencasts.previous_page_number %}">Previous</a>
     {% endif %}
 {% endif %}
 {% if screencasts.has_next %}
-    <a class="ir next_page" href="{% url page page_num=screencasts.next_page_number %}">Next</a>
+    <a class="ir next_page" rel="next" href="{% url page page_num=screencasts.next_page_number %}">Next</a>
 {% endif %}
 </div>
 
